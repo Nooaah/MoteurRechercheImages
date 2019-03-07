@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Image Libre de droit - Moteur de Recherche</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .top-50
+{
+  margin-top: 50px;
+}
+.bottom-50
+{
+  margin-bottom: 50px;
+}
+#inputRecherche
+{
+  margin-top:250px;
+  transition-property: margin-top;
+  transition-duration: 1s;
+}
+</style>
+
+</head>
+
+<body>
+
+  <!-- DEBUT DU PROJET-->
+
+
+
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Moteur de recherche d'images</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="http://www.noah-chatelain.co.nf/">Site web du développeur</a>
+        </li>
+
+
+      </ul>
+      <!-- Links -->
+
+
+  </nav>
+  <!--/.Navbar-->
+
+
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+          <!-- Large input -->
+          <div class="md-form form-lg my-5">
+            <input type="text" id="inputRecherche" class="form-control form-control-lg">
+            <label for="inputLGEx">Rechercher une image (En Anglais)</label>
+            <input class="btn btn-dark" type="submit" name="submit" id="submit" onclick="envoyer()" value="rechercher">
+          </div>
+
+          <script>
+            var input = document.getElementById('inputRecherche');
+            input.addEventListener('keydown', function (e) {
+              if (e.code == 'Enter' || e.code == 'ArrowRight') {
+                envoyer();
+              }
+            });
+
+          </script>
+
+
+          <div id="resultat_alert" role="alert"></div>
+
+
+          <div id="div_image">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- /FIN DU PROJET-->
+
+  <!-- SCRIPTS -->
+
+  <script src="ajax.js"></script>
+  <script src="index.js"></script>
+
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+
+</html>
